@@ -1,6 +1,88 @@
 var APP_DATA = {
   "scenes": [
     {
+      "id": "12--1",
+      "name": "客厅-1",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1520,
+      "initialViewParameters": {
+        "pitch": 0,
+        "yaw": 0,
+        "fov": 1.5707963267948966
+      },
+      "linkHotspots": [
+        {
+          "yaw": -2.6111157651368515,
+          "pitch": 0.23697308678924145,
+          "rotation": 0,
+          "target": "13-"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "13-",
+      "name": "客厅走廊",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1520,
+      "initialViewParameters": {
+        "pitch": 0,
+        "yaw": 0,
+        "fov": 1.5707963267948966
+      },
+      "linkHotspots": [
+        {
+          "yaw": 3.1076743655981733,
+          "pitch": 0.21680833115977727,
+          "rotation": 0,
+          "target": "8-1-"
+        },
+        {
+          "yaw": 0.6266379689173256,
+          "pitch": 0.308172056068333,
+          "rotation": 0,
+          "target": "12--1"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
       "id": "0-1",
       "name": "厕所1",
       "levels": [
@@ -572,88 +654,6 @@ var APP_DATA = {
           "pitch": 0.3742286286794112,
           "rotation": 0,
           "target": "6-"
-        }
-      ],
-      "infoHotspots": []
-    },
-    {
-      "id": "12--1",
-      "name": "客厅-1",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        }
-      ],
-      "faceSize": 1520,
-      "initialViewParameters": {
-        "pitch": 0,
-        "yaw": 0,
-        "fov": 1.5707963267948966
-      },
-      "linkHotspots": [
-        {
-          "yaw": -2.6111157651368515,
-          "pitch": 0.23697308678924145,
-          "rotation": 0,
-          "target": "13-"
-        }
-      ],
-      "infoHotspots": []
-    },
-    {
-      "id": "13-",
-      "name": "客厅走廊",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        }
-      ],
-      "faceSize": 1520,
-      "initialViewParameters": {
-        "pitch": 0,
-        "yaw": 0,
-        "fov": 1.5707963267948966
-      },
-      "linkHotspots": [
-        {
-          "yaw": 3.1076743655981733,
-          "pitch": 0.21680833115977727,
-          "rotation": 0,
-          "target": "8-1-"
-        },
-        {
-          "yaw": 0.6266379689173256,
-          "pitch": 0.308172056068333,
-          "rotation": 0,
-          "target": "12--1"
         }
       ],
       "infoHotspots": []
