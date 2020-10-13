@@ -184,7 +184,7 @@
 
   function switchScene(scene) {
     stopAutorotate();
-    scene.view.setParameters(scene.data.initialViewParameters);
+    scene.view.setParameters(viewer.view() && viewer.view().parameters() || scene.data.initialViewParameters);
     scene.scene.switchTo();
     startAutorotate();
     updateSceneName(scene);
