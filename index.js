@@ -15,6 +15,10 @@
  */
 "use strict";
 
+if (!tour_name) {
+  alert("missing tour name");
+}
+
 (function () {
   var Marzipano = window.Marzipano;
   var bowser = window.bowser;
@@ -72,7 +76,7 @@
 
   // Create scenes.
   var scenes = data.scenes.map(function (data) {
-    var urlPrefix = "tiles";
+    var urlPrefix = "tiles/" + tour_name;
     var source = Marzipano.ImageUrlSource.fromString(
       urlPrefix + "/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
       { cubeMapPreviewUrl: urlPrefix + "/" + data.id + "/preview.jpg" }
