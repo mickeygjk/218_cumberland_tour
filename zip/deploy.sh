@@ -8,9 +8,9 @@ if [ -z "$1" ]; then
 fi
 
 function cleanup {
-  rm -R app-files
-  rm README.txt
-  rm LICENSE.txt
+  rm -R -f app-files
+  rm -f README.txt
+  rm -f LICENSE.txt
 }
 
 cleanup
