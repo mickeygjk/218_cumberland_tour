@@ -6,74 +6,113 @@
   </head>
   <style>
     table {
-      border-spacing: 2em 0.5em;
+      border-spacing: 1em 0.5em;
     }
     th,
     td {
-      font-size: 40px;
+      font-size: 20px;
     }
   </style>
   <body>
     <h1>218 装修日志</h1>
-    <table>
-      <th>一楼</th>
-      <th>二楼</th>
-      <tr>
-        <td>
-          <a href="tour_218_cumberland_1a_2020-10-12.html" target="_blank"
-            >2020-10-12 (装修前）</a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          <a href="tour_218_cumberland_2a_2020-10-18.html" target="_blank"
-            >2020-10-18（装修前）</a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          <a href="tour_218_cumberland_2a_2020-10-24.html" target="_blank"
-            >2020-10-24 （拆墙）</a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="tour_218_cumberland_1a_2020-10-27.html" target="_blank"
-            >2020-10-27 （拆墙）</a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="tour_218_cumberland_1a_2020-10-28.html" target="_blank"
-            >2020-10-28 （拆地板）</a
-          >
-        </td>
-        <td>
-          <a href="tour_218_cumberland_2a_2020-10-28.html" target="_blank"
-            >2020-10-28 （拆墙）</a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="tour_218_cumberland_basement_2020-10-28.html" target="_blank"
-            >2020-10-28 地下室B线厨房下水管漏水换PVC</a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="tour_218_cumberland_1a_2020-11-02.html" target="_blank"
-            >2020-11-02 隔音地板(homasote)+地台板(plywood), 隔间，水管，厨房下水</a
-          >
-        </td>
-      </tr>
+    <table id="tours_table">
+      <th>日期</th>
+      <th>地点</th>
+      <th>描述</th>
     </table>
   </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    tours = [
+      {
+        date: "2020-10-12",
+        location: "1a",
+        link: "tour_218_cumberland_1a_2020-10-12.html",
+        description: "装修前",
+      },
+      {
+        date: "2020-10-18",
+        location: "2a",
+        link: "tour_218_cumberland_2a_2020-10-18.html",
+        description: "装修前",
+      },
+      {
+        date: "2020-10-24",
+        location: "2a",
+        link: "tour_218_cumberland_2a_2020-10-24.html",
+        description: "拆墙",
+      },
+      {
+        date: "2020-10-27",
+        location: "1a",
+        link: "tour_218_cumberland_1a_2020-10-27.html",
+        description: "拆墙",
+      },
+      {
+        date: "2020-10-28",
+        location: "1a",
+        link: "tour_218_cumberland_1a_2020-10-28.html",
+        description: "拆地板",
+      },
+      {
+        date: "2020-10-28",
+        location: "2a",
+        link: "tour_218_cumberland_2a_2020-10-28.html",
+        description: "拆墙",
+      },
+      {
+        date: "2020-10-28",
+        location: "地下室",
+        link: "tour_218_cumberland_basement_2020-10-28.html",
+        description: "地下室B线厨房下水管漏水换PVC",
+      },
+      {
+        date: "2020-11-02",
+        location: "1a",
+        link: "tour_218_cumberland_1a_2020-11-02.html",
+        description: "隔音地板(homasote)+地台板(plywood), 隔间，水管，厨房下水",
+      },
+      {
+        date: "2020-11-04",
+        location: "1a",
+        link: "tour_218_cumberland_1a_2020-11-04.html",
+        description: "浴缸，吊顶，排水, 电箱",
+      },
+      {
+        date: "2020-11-04",
+        location: "2a",
+        link: "tour_218_cumberland_2a_2020-11-04.html",
+        description: "地板，电箱，厕所气管",
+      },
+      {
+        date: "2020-11-04",
+        location: "2a 厕所顶",
+        link: "tour_2a_bathroom_ceiling_2020-11-04.html",
+        description: "3楼浴缸下水，shower 龙头漏水，已换",
+      },
+      {
+        date: "2020-11-04",
+        location: "地下室电线",
+        link: "tour_new_electric_wire_123_fl_2020-11-04.html",
+        description: "地下室新电线",
+      },
+    ]; // End of the tours array;
+    $(document).ready(() => {
+      tours.forEach((tour) => {
+        var $tr = $("<tr>");
+        $tr.append(
+          $("<td>").append(
+            $("<a>")
+              .attr("href", tour.link)
+              .attr("target", "_blank")
+              .html(tour.date)
+          )
+        );
+        $tr.append($("<td>").append($("<span>").html(tour.location)));
+        $tr.append($("<td>").append($("<span>").html(tour.description)));
+
+        $("#tours_table").append($tr);
+      });
+    });
+  </script>
 </html>
