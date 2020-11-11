@@ -3,7 +3,7 @@ set -x
 set -e
 
 if [ -z "$1" -o -z "$2" -o -z "$3"]; then
-  echo "Not enough argument supplied"
+    echo "Not enough argument supplied, (location date description)"
   exit 1
 fi
 
