@@ -96,20 +96,32 @@
         link: "tour_new_electric_wire_123_fl_2020-11-04.html",
         description: "地下室新电线",
       },
-      {date: "2020-11-10", location: "1a", link: "tour_1a_2020-11-10.html", description: "空调，电线，厕所墙"},      {date: "2020-11-11", location: "2a", link: "tour_2a_2020-11-11.html", description: "电线，空调线"},    ]; // End of the tours array;
+      {
+        date: "2020-11-10",
+        location: "1a",
+        link: "tour_1a_2020-11-10.html",
+        description: "空调，电线，厕所墙",
+      },
+      {
+        date: "2020-11-11",
+        location: "2a",
+        link: "tour_2a_2020-11-11.html",
+        description: "电线，空调线",
+      },
+    ]; // End of the tours array;
     $(document).ready(() => {
       tours.forEach((tour) => {
         var $tr = $("<tr>");
+        $tr.append($("<td>").append($("<span>").html(tour.date)));
+        $tr.append($("<td>").append($("<span>").html(tour.location)));
         $tr.append(
           $("<td>").append(
             $("<a>")
               .attr("href", tour.link)
               .attr("target", "_blank")
-              .html(tour.date)
+              .html(tour.description)
           )
         );
-        $tr.append($("<td>").append($("<span>").html(tour.location)));
-        $tr.append($("<td>").append($("<span>").html(tour.description)));
 
         $("#tours_table").append($tr);
       });
